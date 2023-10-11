@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div class="font-body mx-auto mt-0 w-[500px] p-10">
+        <h1 class=" animate__animated animate__slideInLeft text-3xl font-bold font-heading mb-3">List Builder</h1>
+        <div class="add-new-list flex border mb-10">
+          <input
+            id="textInput"
+            class="focus-visible:outline-none px-3 flex-grow border-2 border-black"
+            type="text"
+          />
+          <button id="addBtn" class="bg-black text-white p-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="mb-5 status-box flex justify-between items-center font-heading"
+        >
+          <h3 class="text-2xl font-bold">Your List</h3>
+          <p class="bg-black text-sm text-white px-3 py-1 rounded-full">
+            Done
+            <span id="doneCounter">0</span> / <span id="listCounter">0</span>
+          </p>
+        </div>
+
+        <div id="taskLists" class="font-body">
+          <div class="justify-center hidden last:flex py-16">
+            <div class="">
+              <img class="w-28 mb-3" src="./img/empty.svg" alt="" />
+              <p class="text-sm text-stone-600">There is no List</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/todo.js"></script>
+  </body>
+</html>
